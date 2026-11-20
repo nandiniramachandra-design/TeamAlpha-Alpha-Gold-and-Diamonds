@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["mvn", "openjdk21"]
+
+[phases.build]
+cmds = ["rm -rf target ../target", "mvn clean package -DskipTests"]
+
+[start]
+cmd = "java -jar target/jewellery-backend-0.0.2-SNAPSHOT.jar"
